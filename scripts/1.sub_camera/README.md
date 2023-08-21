@@ -1,4 +1,10 @@
+# 1. sub_camera
+이 코드는 ROS의 cv_bridge 를 이용하여 Morai 시뮬레이션의 camera 토픽을 openCV에서 사용 가능한 이미지 데이터 타입으로 변환하고 출력하는 코드이다.
 
+**1. init**
+```python
+rospy.init_node('camera', anonymous=True)
+```
 - 노드 초기화
 - camera 노드 생성  
   
@@ -36,4 +42,11 @@ except rospy.ROSInterruptException:
 ```
 - 0.001초만큼 키보드가 입력되면 인터럽트가 발생
 - 코드 실행 종료
+
+
+
+
+
+
+
 
