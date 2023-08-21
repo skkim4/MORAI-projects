@@ -29,6 +29,6 @@ $ roslaunch gmapping slam_gmapping_pr2.launch
 </p>
 
 <p align="center">
-<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/a8992895-9331-44eb-847a-90b5ffcbee23" width="300" height="250" >
+<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/14ccd174-fe19-4cd9-b7d7-b8d935043749" width="300" height="250" >
 </p>
 
