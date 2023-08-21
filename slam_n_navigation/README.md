@@ -17,6 +17,7 @@ $ roslaunch wego navigation.launch
 <p align="center">
 <img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/c98ccd26-d902-4262-81a3-1cca6eaee6d0" width="300" height="250" >
 </p>
+
 ```Linux
 $ roslaunch rosbridge_server rosbridge_websocket.launch
 $ roslaunch pointcloud_to_laserscan sample_node.launch
