@@ -53,8 +53,6 @@ def gpsCB(self, data):
 ```
 - 구독한 gps 데이터는 위도와 경도로 이루어져 있으며 이 값을 x,y좌표계로 변환하는 함수
 
-#![gps_path_making](https://github.com/FASTFOOTS/MORAI_Simulation/assets/80691076/d614078e-61a8-4ec0-9a89-083a7690db92)
-
 <p align>
 <img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/7a07aefb-0202-4b00-86d9-d49452a21fdc" width="300" height="250">
 </p>
