@@ -15,7 +15,7 @@ $ roslaunch wego navigation.launch
 ```
   
 <p align="center">
-<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/c98ccd26-d902-4262-81a3-1cca6eaee6d0" width="300" height="250" >
+<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/7e9cc3d5-acd2-482f-9a50-81bb47b5684c" width="300" height="250" >
 </p>
 
 ```Linux
