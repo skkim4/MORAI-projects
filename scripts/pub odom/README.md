@@ -30,6 +30,7 @@ import tf
   - scout_msg message type
     ![Screenshot from 2023-08-21 16-15-19](https://github.com/FASTFOOTS/MORAI_Simulation/assets/108657061/566148d2-85b6-4e79-aff1-76dfffbc36d7)
 
+
   - nav_msg message type
     ![Screenshot from 2023-08-21 15-45-37](https://github.com/FASTFOOTS/MORAI_Simulation/assets/108657061/59f3a170-e2b8-4584-84cf-0a4d71d44c5d)
 
