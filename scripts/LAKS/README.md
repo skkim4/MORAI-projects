@@ -1,9 +1,44 @@
 # LAKS 방법
-sliding_window로 부터 얻어진 좌우 차선의 가운데 지점에서 좌우로 치우처진 정도의 0번째 index ~ 4번째 index 값에
-각각 가중치를 적용하여 저장한 후 이를 전부 더하고 스케일링 하여 Steering 값에 대한 제어량으로 계산합니다.
-cmd_vel topic의 data에 linear.x 값은 0.6 으로 지정하고
-위에서 나온 steering에 대한 제어량을 angular.z 값에 넣어줍니다.
-그 후에 cmd_vel 토픽을 publish 합니다.
+** 1. 로봇 구동을 위한 cmd_vel 계산
+```python
+def img_CB(self, data):
+        img = self.bridge.compressed_imgmsg_to_cv2(data)
+        self.nwindows = 10
+        self.window_height = np.int32(img.shape[0] / self.nwindows)
+        warp_img = self.img_warp(img)
+        blend_img = self.detect_color(warp_img)
+        binary_img = self.img_binary(blend_img)
+        if self.nothing_flag == False:
+            self.detect_nothing()
+            self.nothing_flag = True
+        (
+            sliding_window_img,
+            left,
+            right,
+            center,
+            left_x,
+            left_y,
+            right_x,
+            right_y,
+        ) = self.window_search(binary_img)
+
+        power = [(center[0,0]-self.img_x//2)*0.8,
+                 (center[1,0]-self.img_x//2)*1.0,
+                 (center[2,0]-self.img_x//2)*0.5,
+                 (center[3,0]-self.img_x//2)*0.2,
+                 (center[4,0]-self.img_x//2)*0.1]
+        
+        center_power = (power[0]+power[1]+power[2]+power[3]+power[4])/600
+        
+        self.cmd.linear.x = 1.0
+        self.cmd.angular.z =-center_power
+
+        self.pub.publish(self.cmd)
+```
+- center 배열은 중앙 차선 윈도우의 좌표를 가지고 있다.
+- center 배열과 self.img_x//2(이미지의 중심) 의 차이에 가중치를 곱해 power 배열을 만든다
+- power 배열의 요소들을 각각 더해 cmd_vel 토픽의 angular.z 값으로 입력한다.
+- 계산된 cmd_vel 토픽을 발행하여 Morai 시뮬레이션의 로봇을 동작시킨다.
 
 <p align="center">
 <img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/a239fa4a-12a0-41e7-b2b3-25588e45e2db" width="300" height="250" >
