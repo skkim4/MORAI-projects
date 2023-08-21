@@ -1,0 +1,8 @@
+```Linux
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_lidar" args="0 0 0.1 0 0 0 1 base_link lidar" />
+    <node pkg="kw_tf" type="pub_odom.py" name="pub_odom" output="screen"/>
+</launch>
+```
+- pud_odom.py에서 변환된 로봇의 위치 및 방향 정보를 구하고 이를 이용해 msg를 재구성 후 message publish하는 코드이다.
+- 
