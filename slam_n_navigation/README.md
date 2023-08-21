@@ -15,18 +15,15 @@ $ roslaunch wego navigation.launch
 ```
   
 <p align="center">
-<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/7e9cc3d5-acd2-482f-9a50-81bb47b5684c" width="300" height="250" >
+<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/c98ccd26-d902-4262-81a3-1cca6eaee6d0" width="300" height="250" >
 </p>
-
 ```Linux
 $ roslaunch rosbridge_server rosbridge_websocket.launch
 $ roslaunch pointcloud_to_laserscan sample_node.launch
 $ roslaunch kw_tf tf_setting.launch
 $ roslaunch gmapping slam_gmapping_pr2.launch
 ```
-<p align="center">
-<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/c98ccd26-d902-4262-81a3-1cca6eaee6d0" width="300" height="250" >
-</p>
+
 
 <p align="center">
 <img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/14ccd174-fe19-4cd9-b7d7-b8d935043749" width="300" height="250" >
