@@ -9,8 +9,21 @@ $ roslaunch rosbridge_server rosbridge_websocket.launch
 $ roslaunch pointcloud_to_laserscan sample_node.launch
 $ roslaunch wego tf_setting.launch
 $ roslaunch wego gmapping.launch
+맵 다 그린 후
+$ rosrun map_server map_saver
+$ roslaunch wego navigation.launch
 ```
   
+<p align="center">
+<img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/c98ccd26-d902-4262-81a3-1cca6eaee6d0" width="300" height="250" >
+</p>
+
+```Linux
+$ roslaunch rosbridge_server rosbridge_websocket.launch
+$ roslaunch pointcloud_to_laserscan sample_node.launch
+$ roslaunch kw_tf tf_setting.launch
+$ roslaunch gmapping slam_gmapping_pr2.launch
+```
 <p align="center">
 <img src ="https://github.com/skkim4/MORAI-projects/assets/128979311/c98ccd26-d902-4262-81a3-1cca6eaee6d0" width="300" height="250" >
 </p>
